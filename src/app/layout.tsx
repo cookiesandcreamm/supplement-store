@@ -3,6 +3,11 @@ import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
+import { OrdersProvider } from "@/context/OrdersContext";
+
+export function ProviderLayout({ children }: { children: React.ReactNode }) {
+  return <OrdersProvider>{children}</OrdersProvider>;
+}
 
 export const metadata: Metadata = {
   title: "Supplement Store",

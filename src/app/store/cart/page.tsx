@@ -3,7 +3,7 @@
 import React from "react";
 import { useCart } from "@/context/CartContext";
 
-export default function page() {
+export default function CartPage() {
   const { cart, removeFromCart, clearCart } = useCart();
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
